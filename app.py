@@ -4,7 +4,7 @@ import streamlit as st
 from PIL import Image
 from googletrans import Translator
 
-st.title('Análisis de Sentimiento Marcela DM')
+st.title('Análisis de Sentimiento')
 image = Image.open('emoticones.jpg')
 st.image(image)
 st.subheader("Por favor escribe en el campo de texto la frase que deseas analizar")
@@ -22,8 +22,8 @@ with st.expander('Analizar texto'):
         st.write('Subjectivity: ', round(blob.sentiment.subjectivity,2))
         x=round(blob.sentiment.polarity,2)
         if x >= 0.5:
-            st.write( 'Es un sentimiento Positivo 😊')
+            st.write( 'Es un sentimiento Positivo :D')
         elif x <= -0.5:
-            st.write( 'Es un sentimiento Negativo 😔')
+            st.write( 'Es un sentimiento Negativo :C')
         else:
-            st.write( 'Es un sentimiento Neutral 😐')
+            st.write( 'Es un sentimiento Neutral :|')
